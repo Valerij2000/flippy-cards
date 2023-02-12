@@ -1,0 +1,21 @@
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+
+@function em($px, $current: 16) {
+  $result: math.div($px, $current) + em;
+  @return $result;
+}
+
+@mixin stick-title {
+  font-family: 'IQOS-Bold';
+  font-size: rem(18);
+  line-height: math.div(25, 18);
+  color: $color-white;
+
+  @media (max-width: $xsm) {
+    font-size: rem(14);
+    line-height: math.div(18, 14);
+  }
+}

@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+@font-face {
+  font-family: 'IQOS-Regular';
+  src: url('../fonts/IQOS-Regular.woff2') format('woff2'),
+    url('../fonts/IQOS-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IQOS-Bold';
+  src: url('../fonts/IQOS-Bold.woff2') format('woff2'),
+    url('../fonts/IQOS-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  src: url('../fonts/NotoSans-Regular.woff2') format('woff2'),
+    url('../fonts/NotoSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NotoSans-Light';
+  src: url('../fonts/NotoSans-Light.woff2') format('woff2'),
+    url('../fonts/NotoSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

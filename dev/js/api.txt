@@ -1,0 +1,5 @@
+obj.word.text, // word
+obj.wordTranslationsArr, // array
+obj.audio, // audio
+obj.context.phrase.hTranslations, // phrase ru
+obj.context.phrase.subtitles // phrase en

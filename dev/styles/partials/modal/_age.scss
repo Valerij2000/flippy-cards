@@ -1,0 +1,155 @@
+#modal-age,
+#modal-adult {
+  color: $color-black;
+  text-align: center;
+
+  .modal__headertext {
+    margin: 0 auto 15px;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 150%;
+    text-align: center;
+
+    @media (max-width:$sm) {
+      font-size: 14px;
+    }
+  }
+
+  .modal__overlay {
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow: auto;
+    background-color: transparent;
+  }
+
+  .modal__container {
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    overflow: initial;
+    max-height: inherit;
+    max-width: rem(612);
+    min-height: rem(400);
+    width: 100%;
+    padding: 2rem 1.375rem;
+
+    @media (max-width:$xsm) {
+      min-height: auto;
+    }
+  }
+}
+
+.modal {
+  max-width: 33rem;
+  width: 100%;
+  margin: 0 auto;
+  color: #000;
+  text-align: center;
+  padding: 0 1rem;
+
+  &__title {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  &__title-sorry {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    border-bottom: 1px solid #000000;
+    width: 132px;
+  }
+
+  &__input {
+    display: block;
+    min-width: 30px;
+    outline: none;
+    text-align: center;
+    padding-bottom: 6px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+
+    &::placeholder {
+      color: $color-black;
+      text-align: center;
+    }
+  }
+
+  &__slash {
+    text-align: center;
+    color: $color-black;
+    background: #fff;
+    border-bottom: none;
+    outline: none;
+    display: inline-block;
+    text-decoration: none;
+  }
+}
+
+.invalid {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.sorry {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+#modal-adult {
+
+  svg {
+    width: 11.1rem;
+    height: 2.5rem;
+    margin: 0 auto 3.5rem;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .modal__container {
+    padding: 10rem 1.5rem;
+  }
+}
+
+.modal__inner {
+  max-width: rem(270);
+}
+
+.modal__text {
+  font-weight: 400;
+  font-size: 12.8906px;
+  line-height: 150%;
+  margin-bottom: 24px;
+}
+
+.modal__slash {
+  font-size: 18px;
+}
+
+.modal__ico {
+  max-width: 150px;
+  height: auto;
+}

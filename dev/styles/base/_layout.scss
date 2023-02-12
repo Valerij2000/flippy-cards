@@ -1,0 +1,26 @@
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: $minWidth;
+  margin: 0 auto;
+  max-width: $maxWidthContainer;
+
+  // Прижимаем footer
+  >main {
+    flex: 1 1 auto;
+  }
+
+  // Фикс для слайдеров
+  >* {
+    min-width: 0;
+  }
+}
+
+[class*="__container"] {
+  max-width: $maxWidthContainer;
+  box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 15px;
+}
