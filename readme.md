@@ -1,4 +1,4 @@
-# Gulp WIM
+# Flippy Cards
 
 ## Сommands
 
