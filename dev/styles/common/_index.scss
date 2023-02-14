@@ -3,6 +3,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.active {
+  display: flex !important;
+}
+
 .img {
   max-width: 100%;
   height: auto;
@@ -14,59 +18,10 @@ html {
   transform: scale(0);
 }
 
-.button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  line-height: 24px;
-  padding: 12px 32px;
-  min-height: 44px;
-  border-radius: 24px;
-  transition: all 0.4s ease 0s;
-  background-color: $color-34;
-  color: $mainColor;
-  outline: none;
-
-  @media (max-width: $xsm) {
-    font-size: 14px;
-    line-height: 18px;
-    padding: 8px 22px;
-  }
-}
-
-.blur {
-  .wrapper {
-    filter: blur(10px);
-  }
-}
-
-.prevent-scroll {
-  height: 100% !important;
-  overflow: hidden !important;
-  touch-action: none;
-  width: 100%;
-  position: fixed;
-}
-
 .nowrap {
   white-space: nowrap;
 }
 
 .underline {
   text-decoration: underline !important;
-}
-
-.appear {
-  animation: fade-appear .6s ease-in-out;
-}
-
-@keyframes fade-appear {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }

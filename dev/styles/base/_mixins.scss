@@ -19,3 +19,17 @@
     line-height: math.div(18, 14);
   }
 }
+
+@mixin appear {
+  animation: fade-appear .6s ease-in-out;
+
+  @keyframes fade-appear {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}

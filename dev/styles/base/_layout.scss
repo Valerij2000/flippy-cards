@@ -5,7 +5,7 @@
   overflow: hidden;
   min-width: $minWidth;
   margin: 0 auto;
-  max-width: $maxWidthContainer;
+  background-color: $color-F3;
 
   // Прижимаем footer
   >main {
