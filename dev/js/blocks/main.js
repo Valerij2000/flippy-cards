@@ -14,7 +14,7 @@ function renderingPhrasesList(selector, obj) {
   for (key in obj) {
     if (obj[key] !== null) {
       contain.innerHTML += `
-        <li>${obj[key]}</li>
+        <li class="phrase">${obj[key]}</li>
       `;
     }
   }
@@ -34,7 +34,7 @@ function renderingEnglishFront(obj) {
   let wordEn = obj.word.text,
     front = document.querySelector('#front');
 
-  front.innerHTML = `<p class="word appear">${wordEn}</p>`;
+  front.innerHTML = `<p class="word">${wordEn}</p>`;
 }
 
 function renderingTranslateList(obj) {
@@ -57,7 +57,18 @@ function renderingFlipCard(obj) {
   renderingAudio(obj);
 }
 
+function changesSide() {
+  const container = document.querySelector('#container');
+  container.addEventListener('click', () => {
+    const front = document.querySelector('#front');
+    const back = document.querySelector('#back');
+    front.classList.toggle('active');
+    back.classList.toggle('active');
+  })
+}
+
 function initApp(data) {
+  changesSide();
   for (let i = 0; i < data.length; i++) {
     renderingFlipCard(data[i]);
     document.querySelector('#button-comback').addEventListener('click', () => {

@@ -25,18 +25,20 @@
 
 <body>
   <div class="wrapper">
-    <main>
-      <div class="container">
-        <div class="front appear" id="front"></div>
-        <div class="back appear" id="back">
-          <ul id="translate-list"></ul>
-          <ul id="phrase-en"></ul>
-          <ul id="phrase-ru"></ul>
+    <main class="main">
+      <div class="container" id="container">
+        <div class="front active" id="front"></div>
+        <div class="back" id="back">
+          <ul class="translate-list" id="translate-list"></ul>
+          <ul class="phrase-block" id="phrase-en"></ul>
+          <ul class="phrase-block" id="phrase-ru"></ul>
         </div>
       </div>
-      <button class="button" id="button-comback">Back</button>
-      <button class="button" id="button-continue">Continue</button>
-      <button class="button" id="button-audio">Play Audio</button>
+      <div class="buttons-inline">
+        <button class="button arrow" id="button-comback">&#10132;</button>
+        <button class="button" id="button-audio">Audio</button>
+        <button class="button arrow" id="button-continue">&#10132;</button>
+      </div>
     </main>
   </div>
   <script src="js/all.min.js"></script>
