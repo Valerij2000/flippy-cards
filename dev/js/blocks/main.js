@@ -1,3 +1,10 @@
+function existAudio() {
+  const audio = document.querySelector('audio');
+  if (audio) {
+    audio.remove();
+  }
+}
+
 function renderingAudio(obj) {
   let blobUrl = obj.audio.dataURL;
   window.audio = new Audio();
@@ -54,21 +61,18 @@ function renderingFlipCard(obj) {
   renderingTranslateList(obj);
   renderingPhrasesEnglish(obj);
   renderingPhrasesRussian(obj);
+  existAudio();
   renderingAudio(obj);
 }
 
 function changesSide() {
-  const container = document.querySelector('#container');
-  container.addEventListener('click', () => {
-    const front = document.querySelector('#front');
-    const back = document.querySelector('#back');
-    front.classList.toggle('active');
-    back.classList.toggle('active');
+  document.querySelector('#container').addEventListener('click', () => {
+    document.querySelector('#front').classList.toggle('active');
+    document.querySelector('#back').classList.toggle('active');
   })
 }
 
-function initApp(data) {
-  changesSide();
+function initApp(data) {  
   for (let i = 0; i < data.length; i++) {
     renderingFlipCard(data[i]);
     document.querySelector('#button-comback').addEventListener('click', () => {
@@ -83,8 +87,25 @@ function initApp(data) {
   }
 }
 
-fetch('json/words.json')
-  .then((response) => response.json())
-  .then((data) => {
-    initApp(data);
-  })
+function initFetch(value) {
+  let url = `json/${value}.json`;
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      initApp(data);
+    })
+}
+
+(function init() {
+  const defaultUrl = 'w1';
+  const wordList = document.querySelectorAll('[data-words-list]');  
+  
+  for (let list of wordList) {
+    list.addEventListener('click', function () {
+      toggleMarker(this, wordList);
+      initFetch(this.dataset.wordsList);
+    })
+  }
+  changesSide();
+  initFetch(defaultUrl);
+}())

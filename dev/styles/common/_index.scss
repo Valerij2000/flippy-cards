@@ -7,6 +7,12 @@ html {
   display: flex !important;
 }
 
+.active-list {
+  border: 2px solid pink;
+  border-radius: 20px;
+  padding: 2vmin;
+}
+
 .img {
   max-width: 100%;
   height: auto;

@@ -6,6 +6,8 @@
   text-align: center;
   color: $color-white;
   cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 10px 10px 21px #d3d3d6;
 
   @media (max-width: $xsm) {
     height: 125vmin;
@@ -26,6 +28,7 @@
   height: 100%;
   background: pink;
   color: $color-black;
+  padding: 3vmin;
 }
 
 .front,
@@ -34,5 +37,5 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: rem(20);
+  border-radius: 20px;
 }
