@@ -38,7 +38,12 @@
 }
 
 .button-list {
+  position: absolute;
   margin: 3vmin 5vmin 0;
+
+  @media (max-width: $xl) {
+    position: static;
+  }
 }
 
 .button {

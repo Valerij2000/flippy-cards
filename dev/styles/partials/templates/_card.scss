@@ -9,6 +9,14 @@
   border-radius: 20px;
   box-shadow: 10px 10px 21px #d3d3d6;
 
+  @media (max-width: $xl) {
+    height: 70vmin;
+  }
+
+  @media (max-width: $lg) {
+    height: 90vmin;
+  }
+
   @media (max-width: $xsm) {
     height: 125vmin;
   }
