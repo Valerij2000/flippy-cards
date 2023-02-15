@@ -17,6 +17,10 @@
     height: 90vmin;
   }
 
+  @media (max-height: $lg) and (orientation: landscape) {
+    height: 80vmin;
+  }
+
   @media (max-width: $xsm) {
     height: 125vmin;
   }

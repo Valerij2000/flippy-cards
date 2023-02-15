@@ -39,10 +39,24 @@
 
 .button-list {
   position: absolute;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vmin;
+  border-radius: 50px;
   margin: 3vmin 5vmin 0;
+  box-shadow: 10px 10px 21px #d3d3d6;
+  background-color: $color-green;
+  color: $mainColor;
+  font-size: 3.5vmin;
 
   @media (max-width: $xl) {
     position: static;
+  }
+
+  @media (max-height: $lg) and (orientation: landscape) {
+    position: absolute;
   }
 }
 
