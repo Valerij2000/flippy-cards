@@ -65,23 +65,43 @@ function renderingFlipCard(obj) {
   renderingAudio(obj);
 }
 
+function toggleFlipping() {
+  document.querySelector('#front').classList.toggle('active');
+  document.querySelector('#back').classList.toggle('active');
+}
+
 function changesSide() {
   document.querySelector('#container').addEventListener('click', () => {
-    document.querySelector('#front').classList.toggle('active');
-    document.querySelector('#back').classList.toggle('active');
+    toggleFlipping();
   })
 }
 
-function initApp(data) {  
+function initApp(data) {
   for (let i = 0; i < data.length; i++) {
     renderingFlipCard(data[i]);
     document.querySelector('#button-comback').addEventListener('click', () => {
       data.unshift(data.pop());
-      renderingFlipCard(data[i]);
+      renderingFlipCard(data[i]);      
     })
     document.querySelector('#button-continue').addEventListener('click', () => {
       data.push(data.shift());
-      renderingFlipCard(data[i]);
+      renderingFlipCard(data[i]);      
+    })
+    document.addEventListener("keydown", function (event) {      
+      if (event.code === 'ArrowLeft') {
+        data.unshift(data.pop());
+        renderingFlipCard(data[i]);
+      }
+      if (event.code === 'ArrowRight') {
+        data.push(data.shift());
+        renderingFlipCard(data[i]);
+      }
+      if (event.code === 'Space') {
+        toggleFlipping();
+      }
+      if (event.code === 'ArrowDown') {
+        window.audio.play();
+      }
     })
     break;
   }
@@ -98,8 +118,8 @@ function initFetch(value) {
 
 (function init() {
   const defaultUrl = 'w1';
-  const wordList = document.querySelectorAll('[data-words-list]');  
-  
+  const wordList = document.querySelectorAll('[data-words-list]');
+
   for (let list of wordList) {
     list.addEventListener('click', function () {
       toggleMarker(this, wordList);
