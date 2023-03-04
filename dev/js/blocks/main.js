@@ -76,18 +76,25 @@ function changesSide() {
   })
 }
 
+function eventsNull() {
+  document.querySelector('#button-comback').onclick = null;
+  document.querySelector('#button-continue').onclick = null;
+  document.onkeydown = null;
+}
+
 function initApp(data) {
+  eventsNull();
   for (let i = 0; i < data.length; i++) {
     renderingFlipCard(data[i]);
-    document.querySelector('#button-comback').addEventListener('click', () => {
+    document.querySelector('#button-comback').onclick = function () {
       data.unshift(data.pop());
       renderingFlipCard(data[i]);      
-    })
-    document.querySelector('#button-continue').addEventListener('click', () => {
+    }
+    document.querySelector('#button-continue').onclick = function () {
       data.push(data.shift());
       renderingFlipCard(data[i]);      
-    })
-    document.addEventListener("keydown", function (event) {      
+    }
+    document.onkeydown = function (event) {      
       if (event.code === 'ArrowLeft') {
         data.unshift(data.pop());
         renderingFlipCard(data[i]);
@@ -102,7 +109,7 @@ function initApp(data) {
       if (event.code === 'ArrowDown') {
         window.audio.play();
       }
-    })
+    }
     break;
   }
 }
