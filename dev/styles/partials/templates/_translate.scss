@@ -1,0 +1,48 @@
+.translate-head {
+  font-size: 6vmin;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-green;
+  border-bottom: 1px solid $color-green;
+  padding-top: 2vmin;
+  padding-bottom: 2vmin;
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.sense {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4vmin;
+  padding-top: 3vmin;
+  padding-bottom: 3vmin;
+}
+
+.sentences {
+  font-size: 5vmin;
+  line-height: 1.2;
+  color: $color-black;
+  padding-top: 3vmin;
+  padding-bottom: 3vmin;
+}
+
+.sense__el {
+  font-size: 6vmin;
+  line-height: 1;
+  color: $color-black;
+}
+
+.sentences__el {
+  &:not(:last-child) {
+    margin-bottom: 3vmin;
+  }
+}
+
+.source {
+  color: $color-blue;
+  font-size: 6vmin;
+  line-height: 1.2;
+  padding-top: 5vmin;
+}

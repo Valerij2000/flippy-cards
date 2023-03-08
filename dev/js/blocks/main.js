@@ -39,9 +39,10 @@ function renderingPhrasesEnglish(obj) {
 
 function renderingEnglishFront(obj) {
   let wordEn = obj.word.text,
-    front = document.querySelector('#front');
+    front = document.querySelector('#front');  
 
   front.innerHTML = `<p class="word">${wordEn}</p>`;
+  initSearch(wordEn);
 }
 
 function renderingTranslateList(obj) {

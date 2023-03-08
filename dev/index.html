@@ -28,6 +28,7 @@
     <h1 class="visually-hidden">Web application which help improve english skills</h1>
     <main class="main">
       <button class="button-list" data-modal="modal-list">List</button>
+      <button class="button-reverso" data-search>Search</button>
       <div class="container" id="container">
         <div class="front active" id="front"></div>
         <div class="back" id="back">
@@ -89,6 +90,23 @@
               <button class="modal__btn" data-words-list="w14">3301 - 3400</button>
             </li>
           </ul>
+        </div>
+      </div>
+    </div>
+    <div class="modal micromodal-slide" id="modal-search" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <div class="modal__content">
+            <h2 class="translate-head">Phonetics</h2>
+            <div class="sentences" data-search-content="phonetics"></div>
+            <h2 class="translate-head">Synonyms</h2>
+            <ul class="sense" data-search-content="synonyms"></ul>
+            <h2 class="translate-head">Definitions</h2>
+            <div class="sentences" data-search-content="definitions"></div>
+            <h2 class="translate-head">Antonyms</h2>
+            <ul class="sense" data-search-content="antonyms"></ul>
+            <span role="link" class="source" data-search-source>Source &#128279;</span>
+          </div>
         </div>
       </div>
     </div>
