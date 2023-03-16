@@ -125,7 +125,7 @@ function initFetch(value) {
 }
 
 (function init() {
-  const defaultUrl = 'w1';
+  const defaultUrl = 'w0';
   const wordList = document.querySelectorAll('[data-words-list]');
 
   for (let list of wordList) {
