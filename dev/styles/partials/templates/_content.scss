@@ -76,6 +76,37 @@
   font-size: 3.5vmin;
 }
 
+.range-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  gap: 2vh;
+}
+
+.button-range {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vmin;
+  line-height: 24px;
+  padding: 2vmin 4vmin;
+  min-height: 2vmin;
+  width: 100%;
+  border-radius: 24px;
+  transition: all 0.4s ease 0s;
+  background-color: $color-green;
+  color: $mainColor;
+  outline: none;
+  box-shadow: 10px 10px 21px #d3d3d6;
+
+  @media (max-width: $xsm) {
+    font-size: 5vmin;
+    line-height: 1.3;
+    padding: 2vmin;
+  }
+}
+
 .button {
   display: inline-flex;
   justify-content: center;

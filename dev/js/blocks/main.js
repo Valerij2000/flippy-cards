@@ -83,17 +83,46 @@ function eventsNull() {
   document.onkeydown = null;
 }
 
-function initApp(data) {
+function chunkArray(array, chunkSize) {
+  let result = [];
+  for (let i = 0; i < array.length; i += chunkSize) {
+    result.push(array.slice(i, i + chunkSize));
+  }
+  return result;
+}
+
+function renderWordGroups(data) {
+  return new Promise((resolve) => {
+    MicroModal.show('modal-range');
+    
+    let chunks = chunkArray(data, 40);
+
+    document.querySelectorAll('[data-range]').forEach(button => {
+      button.addEventListener('click', function () {
+        let rangeId = this.dataset.range;
+        MicroModal.close('modal-range');
+        resolve(chunks[rangeId]); // return data by clicking
+      }, { once: true }); // this event works only once
+    });
+  });
+}
+
+async function initApp(data, value) {
   eventsNull();
+
+  if (value === 'w0') {
+    data = await renderWordGroups(data);
+  }
+  
   for (let i = 0; i < data.length; i++) {
     renderingFlipCard(data[i]);
     document.querySelector('#button-comback').onclick = function () {
       data.unshift(data.pop());
-      renderingFlipCard(data[i]);      
+      renderingFlipCard(data[i]);
     }
     document.querySelector('#button-continue').onclick = function () {
       data.push(data.shift());
-      renderingFlipCard(data[i]);      
+      renderingFlipCard(data[i]);
     }
     document.onkeydown = function (event) {      
       if (event.code === 'ArrowLeft') {
@@ -120,7 +149,7 @@ function initFetch(value) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      initApp(data);
+      initApp(data, value);
     })
 }
 
@@ -132,6 +161,7 @@ function initFetch(value) {
     list.addEventListener('click', function () {
       toggleMarker(this, wordList);
       initFetch(this.dataset.wordsList);
+      MicroModal.close('modal-list');
     })
   }
   changesSide();

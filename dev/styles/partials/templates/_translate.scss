@@ -7,6 +7,10 @@
   padding-top: 2vmin;
   padding-bottom: 2vmin;
 
+  &.mb-2 {
+    margin-bottom: 2vh;
+  }
+
   &:first-child {
     padding-top: 0;
   }
