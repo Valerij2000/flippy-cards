@@ -28,38 +28,38 @@ import newer from "gulp-newer";
 // переменные окружения
 const argv = yargs(hideBin(process.argv)).argv;
 const isDev = () => {
-  return !argv.build;
+  return !argv.docs;
 }
 const isProd = () => {
-  return !!argv.build;
+  return !!argv.docs;
 }
 
 // очистка билд директории
 const clean = () => {
-  return deleteAsync(['build']);
+  return deleteAsync(['docs']);
 }
 
 // копирование доп файлов
 const resources = () => {
   return gulp.src('dev/res/**')
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('docs'));
 }
 
 const fonts = () => {
   return gulp.src('dev/fonts/**')
-    .pipe(gulp.dest('build/fonts'));
+    .pipe(gulp.dest('docs/fonts'));
 }
 
 const json = () => {
   return gulp.src('dev/json/**')
-    .pipe(gulp.dest('build/json'));
+    .pipe(gulp.dest('docs/json'));
 }
 
 // сервер
 const server = (done) => {
   browsersync.init({
     server: {
-      baseDir: `${'build'}`
+      baseDir: `${'docs'}`
     },
     notify: false,
     port: 3000,
@@ -89,7 +89,7 @@ const scss = () => {
     .pipe(rename({
       extname: ".min.css"
     }))
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('docs/css'))
     .on("end", browsersync.reload);
 }
 
@@ -99,7 +99,7 @@ const html = () => {
     .pipe(gulpif(isProd, htmlmin({
       collapseWhitespace: true
     })))
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('docs'))
     .pipe(browsersync.stream());
 }
 
@@ -113,7 +113,7 @@ const js = () => {
     .pipe(concat('all.min.js'))
     .pipe(gulpif(isProd, terser()))
     .pipe(gulpif(!isProd, sourcemaps.write("../maps")))
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest('docs/js'))
     .on("end", browsersync.reload);
 }
 
@@ -128,17 +128,17 @@ const svgSprite = () => {
         }
       }
     }))
-    .pipe(gulp.dest('build/images/'));
+    .pipe(gulp.dest('docs/images/'));
 }
 
 // image, webp
 const images = () => {
   return gulp.src('dev/images/*.*')
-    .pipe(newer('build/images'))
+    .pipe(newer('docs/images'))
     .pipe(webp())
-    .pipe(gulp.dest('build/images'))
+    .pipe(gulp.dest('docs/images'))
     .pipe(gulpif(isProd, gulp.src('dev/images/*.*')))
-    .pipe(gulpif(isProd, newer('build/images')))
+    .pipe(gulpif(isProd, newer('docs/images')))
     .pipe(gulpif(isProd,
       imagemin({
         progressive: true,
@@ -149,7 +149,7 @@ const images = () => {
         optimizationLevel: 3 // 0 to 7
       })
     ))
-    .pipe(gulp.dest('build/images'))
+    .pipe(gulp.dest('docs/images'))
     .on("end", browsersync.reload);
 }
 
@@ -168,5 +168,5 @@ function watcher() {
 
 const main = gulp.parallel(resources, fonts, json, html, scss, js, svgSprite, images);
 export const dev = gulp.series(clean, main, gulp.parallel(watcher, server));
-export const build = gulp.series(clean, main);
+export const docs = gulp.series(clean, main);
 gulp.task('default', dev);
