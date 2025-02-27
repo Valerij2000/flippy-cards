@@ -1,1 +1,220 @@
-<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]--><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5"><link rel="apple-touch-icon" sizes="160x160" href="images/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"><link rel="preload" href="fonts/IQOS-Regular.woff" as="font" type="font/woff" crossorigin="anonymous"><link rel="preload" href="fonts/IQOS-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="fonts/IQOS-Bold.woff" as="font" type="font/woff" crossorigin="anonymous"><link rel="preload" href="fonts/IQOS-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="stylesheet preload prefetch" type="text/css" href="css/style.min.css" as="style" crossorigin="anonymous"><title>Flippy Cards</title><meta property="og:type" content="website"><meta property="og:title" content=""><meta property="title" content=""><meta property="og:description" content=""><meta property="description" content=""><meta property="og:image" content=""><meta name="keywords" content=""></head><body><div class="wrapper"><h1 class="visually-hidden">Web application which is improving your english skills</h1><main class="main"><button class="button-list" data-modal="modal-list">List</button> <button class="button-reverso" data-search>Search</button><div class="container" id="container"><div class="front active" id="front"></div><div class="back" id="back"><ul class="translate-list" id="translate-list"></ul><ul class="phrase-block" id="phrase-en"></ul><ul class="phrase-block" id="phrase-ru"></ul></div></div><div class="buttons-inline"><button class="button arrow" id="button-comback">&#10132;</button> <button class="button" id="button-audio">Audio</button> <button class="button arrow" id="button-continue">&#10132;</button></div></main><div class="modal micromodal-slide" id="modal-list" aria-hidden="true"><div class="modal__overlay" tabindex="-1" data-micromodal-close><div class="modal__container" role="dialog" aria-modal="true"><ul class="modal__content"><li class="modal__item"><button class="modal__btn active-list" data-words-list="w0">0 - 2000</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w1">2001 - 2100</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w2">2101 - 2200</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w3">2201 - 2300</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w4">2301 - 2400</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w5">2401 - 2500</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w6">2501 - 2600</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w7">2601 - 2700</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w8">2701 - 2800</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w9">2801 - 2900</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w10">2901 - 3000</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w11">3001 - 3100</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w12">3101 - 3200</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w13">3201 - 3300</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w14">3301 - 3400</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w15">3401 - 3500</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w16">3501 - 3600</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w17">3601 - 3700</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w18">3701 - 3800</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w19">3801 - 3900</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w20">3901 - 4000</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w21">4001 - 4100</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w22">4101 - 4200</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w23">4201 - 4300</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w24">4301 - 4400</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w25">4401 - 4500</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w26">4501 - 4600</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w27">4601 - 4700</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w28">4701 - 4800</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w29">4801 - 4900</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w30">4901 - 5000</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w31">5001 - 5100</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w32">5101 - 5200</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w33">5201 - 5300</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w34">5301 - 5400</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w35">5401 - 5500</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w36">5501 - 5600</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w37">5601 - 5700</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w38">5701 - 5800</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w39">5801 - 5900</button></li><li class="modal__item"><button class="modal__btn" data-words-list="w40">5901 - 6000</button></li></ul></div></div></div><div class="modal micromodal-slide" id="modal-search" aria-hidden="true"><div class="modal__overlay" tabindex="-1" data-micromodal-close><div class="modal__container" role="dialog" aria-modal="true"><div class="modal__content"><h2 class="translate-head">Phonetics</h2><div class="sentences" data-search-content="phonetics"></div><h2 class="translate-head">Synonyms</h2><ul class="sense" data-search-content="synonyms"></ul><h2 class="translate-head">Definitions</h2><div class="sentences" data-search-content="definitions"></div><h2 class="translate-head">Antonyms</h2><ul class="sense" data-search-content="antonyms"></ul><span role="link" class="source" data-search-source>Source &#128279;</span></div></div></div></div><div class="modal micromodal-slide" id="modal-range" aria-hidden="true"><div class="modal__overlay" tabindex="-1"><div class="modal__container" role="dialog" aria-modal="true"><div class="modal__content"><h2 class="translate-head mb-2">Range</h2><div class="range-wrap mb-2"><button class="button-range m" data-range="0">Range 1</button> <button class="button-range m" data-range="3">Range 4</button></div><div class="range-wrap mb-2"><button class="button-range m" data-range="1">Range 2</button> <button class="button-range m" data-range="4">Range 5</button></div><div class="range-wrap mb-2"><button class="button-range m" data-range="2">Range 3</button> <button class="button-range m" data-range="5">Range 6</button></div></div></div></div></div></div><script src="js/all.min.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <link rel="apple-touch-icon" sizes="160x160" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="preload" href="fonts/IQOS-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/IQOS-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/IQOS-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/IQOS-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet preload prefetch" type="text/css" href="css/style.min.css" as="style" crossorigin="anonymous">
+  <title>Flippy Cards</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="title" content="">
+  <meta property="og:description" content="">
+  <meta property="description" content="">
+  <meta property="og:image" content="">
+  <meta name="keywords" content="">
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1 class="visually-hidden">Web application which is improving your english skills</h1>
+    <main class="main">
+      <button class="button-list" data-modal="modal-list">List</button>
+      <button class="button-reverso" data-search>Search</button>
+      <div class="container" id="container">
+        <div class="front active" id="front"></div>
+        <div class="back" id="back">
+          <ul class="translate-list" id="translate-list"></ul>
+          <ul class="phrase-block" id="phrase-en"></ul>
+          <ul class="phrase-block" id="phrase-ru"></ul>
+        </div>
+      </div>
+      <div class="buttons-inline">
+        <button class="button arrow" id="button-comback">&#10132;</button>
+        <button class="button" id="button-audio">Audio</button>
+        <button class="button arrow" id="button-continue">&#10132;</button>
+      </div>
+    </main>
+    <div class="modal micromodal-slide" id="modal-list" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <ul class="modal__content">
+            <li class="modal__item">
+              <button class="modal__btn active-list" data-words-list="w0">0 - 2000</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w1">2001 - 2100</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w2">2101 - 2200</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w3">2201 - 2300</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w4">2301 - 2400</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w5">2401 - 2500</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w6">2501 - 2600</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w7">2601 - 2700</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w8">2701 - 2800</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w9">2801 - 2900</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w10">2901 - 3000</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w11">3001 - 3100</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w12">3101 - 3200</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w13">3201 - 3300</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w14">3301 - 3400</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w15">3401 - 3500</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w16">3501 - 3600</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w17">3601 - 3700</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w18">3701 - 3800</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w19">3801 - 3900</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w20">3901 - 4000</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w21">4001 - 4100</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w22">4101 - 4200</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w23">4201 - 4300</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w24">4301 - 4400</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w25">4401 - 4500</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w26">4501 - 4600</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w27">4601 - 4700</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w28">4701 - 4800</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w29">4801 - 4900</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w30">4901 - 5000</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w31">5001 - 5100</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w32">5101 - 5200</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w33">5201 - 5300</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w34">5301 - 5400</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w35">5401 - 5500</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w36">5501 - 5600</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w37">5601 - 5700</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w38">5701 - 5800</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w39">5801 - 5900</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__btn" data-words-list="w40">5901 - 6000</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="modal micromodal-slide" id="modal-search" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <div class="modal__content">
+            <h2 class="translate-head">Phonetics</h2>
+            <div class="sentences" data-search-content="phonetics"></div>
+            <h2 class="translate-head">Synonyms</h2>
+            <ul class="sense" data-search-content="synonyms"></ul>
+            <h2 class="translate-head">Definitions</h2>
+            <div class="sentences" data-search-content="definitions"></div>
+            <h2 class="translate-head">Antonyms</h2>
+            <ul class="sense" data-search-content="antonyms"></ul>
+            <span role="link" class="source" data-search-source>Source &#128279;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal micromodal-slide" id="modal-range" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1">
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <div class="modal__content">
+            <h2 class="translate-head mb-2">Range</h2>
+            <div class="range-wrap mb-2">
+              <button class="button-range m" data-range="0">Range 1</button>
+              <button class="button-range m" data-range="3">Range 4</button>
+            </div>
+            <div class="range-wrap mb-2">
+              <button class="button-range m" data-range="1">Range 2</button>
+              <button class="button-range m" data-range="4">Range 5</button>
+            </div>
+            <div class="range-wrap mb-2">
+              <button class="button-range m" data-range="2">Range 3</button>
+              <button class="button-range m" data-range="5">Range 6</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="js/all.min.js"></script>
+</body>
+
+</html>
